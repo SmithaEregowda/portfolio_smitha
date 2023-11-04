@@ -15,10 +15,10 @@ const Skills = () => {
            />
         </div>
         <div className={styles.skillsContent}>
-            <div className={styles.skillItem}>
+            {/* <div className={styles.skillItem}>
                 <div className={styles.skillHeading}>React</div>
                 <div><Progress percent={85} /></div>
-            </div>
+            </div> */}
             <div className={styles.skillItem}>
                 <div className={styles.skillHeading}>Node Js</div>
                 <div><Progress percent={60} /></div>
