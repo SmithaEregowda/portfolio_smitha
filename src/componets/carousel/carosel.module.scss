@@ -1,0 +1,59 @@
+.carouselWrapper{
+    height: 50rem;
+    .carouselContent{
+        display: grid;
+        grid-template-columns: 60% 40%;
+        height: 50rem;
+        .describeSection{
+            position: relative;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            // right: 15%;
+            .smallText{
+                font-weight: 600;
+                font-size: 1.2rem;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                color:var(--prime1);
+                margin-bottom: 2rem;
+            }
+            .intro{
+                font-weight: 800;
+                font-size: 2rem;
+                letter-spacing: 3px; 
+                margin-bottom: 0.5rem;
+                .subText{
+                    font-size: 1.3rem;
+                    margin-top: 0.5rem;
+                }
+                .name{
+                    color: var(--prime1);
+                }
+            }
+            .job{
+                font-weight: 800;
+                font-size: 2rem;
+                letter-spacing: 3px;  
+            }
+            .btnActions{
+                display: flex;
+                justify-content: center;
+                grid-gap: 1rem;
+                padding: 1rem;
+            }
+        }
+        .imageSection{
+            height: 80%;
+            display: grid;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 1rem;
+            position: relative;
+            right: 15%;
+            img{
+                height: 80%;
+            }
+        }
+    }
+}

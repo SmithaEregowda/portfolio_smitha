@@ -1,0 +1,84 @@
+    .layoutWrapper{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        padding: 1rem;
+        background: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 3;
+        .title{
+            display: grid;
+            font-weight: 500;
+            font-size: 2rem;
+        }
+        .navIcon{
+            display: none;
+        }
+        .navLink{
+            display: grid;
+            grid-auto-flow: column;
+            .navItem{
+                cursor: pointer;
+                display: grid;
+                justify-content: center;
+                align-items: center;
+                span{
+                    padding-bottom: 0.5rem;
+                }
+                &:hover{
+                    color: var(--prime1);
+                }
+            }
+            .activeItem{
+                color: var(--prime1);
+                span{
+                    border-bottom: 2px solid var(--prime1);
+                }
+            }
+        }
+        @media only screen and (max-width:775px){
+            .blackBg{
+                background: #000 !important;
+            }
+            .navLink{
+                display: none;
+            }
+            .navIcon{
+                display: grid;
+                justify-content: flex-end;
+                img{
+                    cursor: pointer;  
+                }
+            }
+            .navList{
+                display: grid;
+                grid-auto-flow: row;
+                justify-content: flex-start;
+                transition: 5s;
+                .navItem{
+                    justify-content: flex-start;
+                    padding: 1rem 2rem;
+                    &:hover{
+                        color: var(--prime1);
+                    }
+                }
+            }
+        }
+    }
+    .sleep{
+        display: none;
+        transition: .3s all ease-out;
+    }
+
+    .scrolled{
+        position: fixed;
+        transition: .3s all ease-out;
+        background: #000;
+    }
+    @media only screen and (max-width:775px){
+        .blackBg{
+            background: #000 !important;
+        }
+    }

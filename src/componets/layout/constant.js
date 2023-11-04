@@ -1,0 +1,25 @@
+export const NAVLINKS=[
+    {
+        id:"home",
+        label:"Home"
+    },
+    {
+        id:"about",
+        label:"About"
+    },{
+        id:"skills",
+        label:"Skills"
+    },
+    {
+        id:"project",
+        label:"Projects"
+    },
+    {
+        id:"certificate",
+        label:"Certificates"
+    },
+    {
+        id:"contact",
+        label:"Contact"
+    }
+]

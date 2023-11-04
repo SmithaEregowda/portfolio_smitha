@@ -1,0 +1,28 @@
+.footerWrapper{
+    padding: 1rem;
+    border-top: 1px solid #9999;
+    .footerItems{
+        display: flex;
+        flex-wrap: wrap;
+        padding:0 10rem ;
+        .footerItem{
+            flex-basis: 0;
+            flex-grow: 1;
+            padding: 1rem;
+            .label{
+                font-size: 1.5rem;
+                font-weight: 600;
+            }
+            .content{
+                color: #9999;
+                padding: 1rem 0 0;
+                div{
+                    padding: 0.5rem 0 0;
+                }
+                .links{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

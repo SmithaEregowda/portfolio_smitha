@@ -1,0 +1,32 @@
+.appHomeContent{
+    background: var(--black);
+    color:var(--white) ;
+}
+.ant-btn{
+    background: var(--prime1);
+}
+.ant-progress-inner{
+    background:var(--white) !important;
+    opacity: 0.5 !important;
+    height: 0.8rem !important;
+}
+.ant-progress-bg{
+    background: var(--prime1) !important;
+    height: 0.8rem !important;
+}
+.ant-progress-text{
+    color: var(--white) !important;
+}
+
+label{
+    color: var(--white) !important;
+    font-size: 1.4rem !important;
+    font-weight: 600;
+    line-height: 2;
+}
+.ant-input{
+    border: none;
+    background: rgb(70, 69, 69);
+    color: white !important;
+    padding: 0.5rem;
+}

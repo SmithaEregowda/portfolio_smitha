@@ -1,0 +1,40 @@
+.projectWrapper{
+    .projectItems{
+        display: flex;
+        justify-content: center;
+        .projectItem{
+            cursor: pointer;
+            display: grid;
+            position: relative;
+            justify-content: center;
+            width: 50rem;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            border-radius: 2px;
+            color: #999999;
+            &:hover{
+                box-shadow: 2px 2px 2px 2px rgba(209, 205, 205, 0.6);
+                .openLink{
+                    display: grid;
+                    position: absolute;
+                    left: 43%;
+                    top: 35%;
+                    z-index: 3;
+                }
+                img{
+                    opacity: 0.7;
+                }
+            }
+            
+            .openLink{
+               display: none;
+            }
+            img{
+                width: 100%;
+                display: grid;
+                justify-content: center;
+                background:var(--prime-1);
+            }
+        }
+    }
+}

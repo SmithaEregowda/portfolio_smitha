@@ -1,0 +1,18 @@
+.skillsWrapper{
+    padding: 7rem;
+    display: grid;
+    // width: 80%;
+    .skillsContent{
+       display: grid;
+       grid-template-columns: auto auto;
+       grid-gap: 2rem;
+       .skillItem{
+        .skillHeading{
+            text-transform: uppercase;
+            font-size: 1.4rem;
+            font-weight: 600;
+            line-height: 2;
+        }
+       }
+    }
+}

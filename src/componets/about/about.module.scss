@@ -1,0 +1,35 @@
+.aboutmeWrapper{
+    display: grid;
+    justify-content: center;
+   
+    .aboutLayout{
+        width: 95%;
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    grid-gap: 5rem;
+        .imageSection{
+            display: grid;
+            justify-content: flex-end;
+        }
+        .infosection{
+            .personalData{
+                .row{
+                    display: grid;
+                    grid-template-columns: 10rem 10rem;
+                    padding: 1rem;
+                    letter-spacing: 0.1rem;
+                    .data{
+                        display: grid;
+                        text-align: center;
+                        justify-content: flex-start;
+                        color: #999999;
+                    }
+                }
+                .cvBtn{
+                    padding: 2rem 3rem;
+                }
+            }
+        }
+    }
+   
+}
