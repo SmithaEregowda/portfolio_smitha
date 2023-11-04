@@ -36,5 +36,10 @@
                 background:var(--prime-1);
             }
         }
+        @media only screen and (max-width:775px){
+            .projectItem{
+                width: 85%;
+            }
+        }
     }
 }

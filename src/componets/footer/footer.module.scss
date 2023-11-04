@@ -25,4 +25,9 @@
             }
         }
     }
+    @media only screen and (max-width:775px){
+        .footerItems{
+            padding: 0 1rem;
+        }
+    }
 }

@@ -30,7 +30,7 @@ const ContactSection = () => {
                 </div>
                 </div>
                 <div className={styles.label}>
-                    https://www.linkedin.com/in/smitha-h-e-a3b630156/
+                    <p>https://www.linkedin.com/in/smitha-h-e-a3b630156/</p>
                 </div>
             </div>
             <div className={styles.contactItem}>
@@ -42,7 +42,7 @@ const ContactSection = () => {
                 </div>
                 </div>
                 <div className={styles.label}>
-                    smithaeregowda@gmail.com
+                    <p>smithaeregowda@gmail.com</p>
                 </div>
             </div>
             <div className={styles.contactItem}>
@@ -54,7 +54,7 @@ const ContactSection = () => {
                 </div>
                 </div>
                 <div className={styles.label}>
-                    7892433070
+                   <p> 7892433070</p>
                 </div>
             </div>
         </div>

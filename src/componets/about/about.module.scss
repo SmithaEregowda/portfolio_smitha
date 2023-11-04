@@ -31,5 +31,39 @@
             }
         }
     }
+
+    @media only screen and (max-width:775px){
+        .aboutLayout{
+            display: block;
+            position: relative;
+            width: 100%;
+            .imageSection{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    }
+    @media only screen and (max-width:440px){
+        .aboutLayout{
+            display: block;
+            position: relative;
+            width: 100%;
+            .imageSection{
+                position: absolute;
+                height: 100%;
+                width: 100%;
+                justify-content: center;
+            }
+            .row{
+                padding: 0.5rem;
+                grid-template-columns: none !important;
+                .data{
+                    padding: 1rem 0;
+                }
+            }
+        }
+    }
    
 }
