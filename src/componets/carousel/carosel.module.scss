@@ -56,4 +56,21 @@
             }
         }
     }
+    @media only screen and (max-width:775px){
+        .carouselContent{
+            position: relative;
+            display: block;
+            .describeSection{
+                width: 100%;
+                top: 32%;
+                z-index: 3;
+            }
+            .imageSection{
+                position: absolute;
+                right: 0;
+                bottom: 10%;
+            }
+        }
+    }
 }
+
