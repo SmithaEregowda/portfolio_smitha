@@ -3,8 +3,17 @@ import React from 'react'
 import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from './carosel.module.scss'
+import { downloadcv } from '../../commoncomponents/utils/downloadcv';
 
 const CarouselComponent = () => {
+  const navItemHandler=()=>{
+    let offsetTop  = document.getElementById("contact").offsetTop;
+    window.scrollTo({
+        top: offsetTop-100, 
+        behavior: "smooth"
+    });
+}
+
   return (
     <Carousel  
     autoPlay={true} 
@@ -21,8 +30,13 @@ const CarouselComponent = () => {
                         <div className={styles.intro}>I'm <span className={styles.name}>Smitha H E</span></div>
                         <div className={styles.job}>A Software Developer</div>
                         <div className={styles.btnActions}>
-                          <Button type="primary">Download CV</Button>
-                          <Button type="primary">Hire Me</Button>
+                          <Button 
+                            type="primary"
+                            onClick={downloadcv}
+                          >Download CV</Button>
+                          <Button type="primary" onClick={navItemHandler}>
+                            Hire Me
+                          </Button>
                         </div>
                     </div>
                     </div>
@@ -43,8 +57,13 @@ const CarouselComponent = () => {
                                <div className={styles.subText}> Passion for Creating Beautiful Websites</div>
                         </div>
                         <div className={styles.btnActions}>
-                          <Button type="primary">Download CV</Button>
-                          <Button type="primary">Hire Me</Button>
+                          <Button 
+                          type="primary"
+                          onClick={downloadcv}
+                          >Download CV</Button>
+                          <Button type="primary" onClick={navItemHandler}>
+                            Hire Me
+                          </Button>
                         </div>
                         </div>
                     </div>
