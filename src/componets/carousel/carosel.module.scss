@@ -60,6 +60,7 @@
         .carouselContent{
             position: relative;
             display: block;
+            height: 30rem;
             .describeSection{
                 width: 100%;
                 top: 32%;
@@ -71,6 +72,11 @@
                 bottom: 10%;
             }
         }
+    }
+}
+@media only screen and (max-width:775px){
+    .carouselWrapper{
+        height: 35rem;
     }
 }
 

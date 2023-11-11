@@ -16,7 +16,12 @@ const ProjectSection = () => {
            <div className={styles.projectItems}>
               <div className={styles.projectItem}>
                 <div className={styles.openLink}>
-                <Button>View Website</Button>
+                <Button>
+                  <a href="https://shop-products-front-end.vercel.app/" 
+                  target="blank">
+                    View Website
+                    </a>
+                </Button>
                 </div>
                 <img
                   src='images/veggisproj.png'

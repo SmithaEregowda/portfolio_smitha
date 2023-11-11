@@ -1,14 +1,36 @@
 import { Button, Form, Input } from 'antd'
 import TextArea from 'antd/es/input/TextArea'
-import React from 'react'
+import React, { useEffect } from 'react'
 import ContentHeading from '../../commoncomponents/heading'
 import styles from "./contact.module.scss"
 import {LinkedinFilled,MailFilled,PhoneFilled} from "@ant-design/icons"
+import emailjs from "@emailjs/browser"
+
 const ContactSection = () => {
     const [form]=Form.useForm();
-    const contactformHandler=(values)=>{
-        console.log(values)
+    useEffect(() => emailjs.init("sNpDZh3GMvoxoU2EF"), []);
+
+    const contactformHandler=async(values)=>{
+        // e.preventDefault();
+        const serviceId = "service_whbb42x";
+        const templateId = "template_g3nobnq";
+        try {
+        //   setLoading(true);
+          await emailjs.send(serviceId, templateId, {
+            name: values?.name,
+            recipient: "smithaeregowda@gmail.com",
+            email:values?.email,
+            message:values?.message
+          });
+        //   form.resetFields();
+        } catch (error) {
+          console.log(error);
+        } finally {
+            // form.resetFields();
+        //   setLoading(false);
+        }
     }
+
   return (
     <div className={styles.contactWrapper}>
         <div className={styles.header}>
@@ -66,19 +88,41 @@ const ContactSection = () => {
                     layout={"vertical"}
                     onFinish={contactformHandler}
                     >
-                        <Form.Item label="You're Name">
+                        <Form.Item 
+                        label="You're Name" 
+                        name={"name"} 
+                        rules={[
+                            {required:true},
+                            {message:"Name is required"}
+                        ]}
+                        >
                             <Input />
                         </Form.Item>
-                        <Form.Item label="You're Email">
+                        <Form.Item label="You're Email" 
+                        name={"email"} 
+                        required={true} 
+                        rules={[
+                            {required:true},
+                            { type: 'email' },
+                        {message:"please enter valid email"}
+                    ]} 
+                        >
                             <Input />
                         </Form.Item>
-                        <Form.Item label="You're Message">
+                        <Form.Item 
+                        label="You're Message"
+                         name={"message"} 
+                         rules={[
+                            {required:true},
+                            {message:"Name is required"}
+                        ]}
+                         >
                             <TextArea rows={4} />
                         </Form.Item>
                     </Form>
                 </div>
                 <div>
-                    <Button type='primary'>Send Message</Button>
+                    <Button type='primary' onClick={()=>form.submit()}>Send Message</Button>
                 </div>
             </div>
             <div className={styles.contactImage}>

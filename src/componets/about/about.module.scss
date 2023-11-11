@@ -59,6 +59,9 @@
             .row{
                 padding: 0.5rem;
                 grid-template-columns: 6rem 1fr !important;
+                .infoHead{
+                    padding: 1rem 0;
+                }
                 .data{
                     padding: 1rem 0;
                 }
