@@ -42,6 +42,7 @@ const ContactSection = () => {
                 allignment={"center"}
            />
         </div>
+        <div className={styles.contactIconsWrapper}>
         <div className={styles.contactIcons}>
             <div className={styles.contactItem}>
                 <div className={styles.socialIcon}>
@@ -79,6 +80,7 @@ const ContactSection = () => {
                    <p> 7892433070</p>
                 </div>
             </div>
+        </div>
         </div>
         <div className={styles.contactInfo}>
             <div className={styles.contactForm}>

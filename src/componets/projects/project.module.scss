@@ -39,6 +39,31 @@
         @media only screen and (max-width:775px){
             .projectItem{
                 width: 85%;
+                &:hover{
+                    .openLink{
+                        display: grid;
+                        position: absolute;
+                        left: 38%;
+                        top: 25%;
+                        z-index: 3;
+                    }
+                    
+                }
+            }
+        }
+        @media only screen and (max-width:445px){
+            .projectItem{
+                width: 85%;
+                &:hover{
+                    .openLink{
+                        display: grid;
+                        position: absolute;
+                        left: 33%;
+                        top: 25%;
+                        z-index: 3;
+                    }
+                    
+                }
             }
         }
     }
