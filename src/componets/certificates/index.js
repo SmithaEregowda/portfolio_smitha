@@ -46,7 +46,7 @@ const CertificateSections = () => {
                         }
                       />
                     <div>
-                        <p>Completed a course "reponsive web design" under spark foundation and got certified </p>
+                        <p>Completed a course "reponsive web design" under freeCodeCamp and got certified </p>
                     </div>
                 </div>
                 <div className={styles.certificateItem}>

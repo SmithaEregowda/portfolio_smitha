@@ -8,7 +8,6 @@
         font-size: 7vw;
         font-weight: 800;
         width: 100%;
-        justify-content: center;
         display: grid;
     }
     .centerdTxt{
@@ -21,7 +20,6 @@
         font-weight: 600;
         padding: 0 1rem;
         position: relative;
-        justify-content: center;
         display: grid;
     }
     .selfIntro{
@@ -29,4 +27,13 @@
         font-size: 1.2em;
         color: #999999;
     }
+}
+
+@media only screen and (max-width:775px){
+  .backgroundTxt{
+    justify-content: center;
+  }
+  .text{
+    justify-content: center;
+  }
 }

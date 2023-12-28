@@ -8,13 +8,29 @@ const Layout = ({children}) => {
     const [shownavs,setShowNav]=useState(false)
     
     const changeNavcolor=()=>{
-        setScrollNum(window.scrollY)
+        setScrollNum(window.scrollY);
+        if(window.scrollY<700){
+            setActiveItem("home")
+        }else if(window.scrollY>=700&&window.scrollY<1313){
+            setActiveItem("about")
+        }else if(window.scrollY>=1313&&window.scrollY<1967){
+            setActiveItem("skills")
+        }else if(window.scrollY>=1967&&window.scrollY<2650){
+            setActiveItem("project")
+        }else if(window.scrollY>=1650&&window.scrollY<3277){
+            setActiveItem("certificate")
+        }else if(window.scrollY>=3277){
+            setActiveItem("contact")
+        }
+
     }
     window.addEventListener("scroll",changeNavcolor)
     const navItemHandler=(navItem)=>{
         setShowNav(false)
         setActiveItem(navItem?.id);
+       
         let offsetTop  = document.getElementById(navItem?.id).offsetTop;
+        console.log(offsetTop-100)
         window.scrollTo({
             top: offsetTop-100, 
             behavior: "smooth"

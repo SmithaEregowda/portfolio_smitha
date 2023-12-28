@@ -1,15 +1,20 @@
 .contactWrapper{
     padding: 2rem;
+    .contactIconsWrapper{
+        display: grid;
+        justify-content:center;
+    }
     .contactIcons{
         display: flex;
         padding: 2rem;
         flex-wrap: wrap;
-        grid-gap: 1rem;
+        grid-gap: 1.5rem;
         justify-content: space-between;
         
         .contactItem{
             display: grid;
             grid-gap: 0.5rem;
+            grid-template-rows: 6rem 1fr;
             width: 20rem;
             .socialIcon{
                 display: grid;

@@ -10,7 +10,7 @@ const FooterSection = () => {
                 <div className={styles.content}>
                     Finally !!! , This is all
                     about my personal career and 
-                    if you wamt to hire me ,
+                    if you want to hire me ,
                     please reach out to me
                 </div>
             </div>
