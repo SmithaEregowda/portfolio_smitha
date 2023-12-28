@@ -41,6 +41,11 @@
                  }
             }
         }
+        @media only screen and (max-width:690px) {
+           .certificateItems{
+            justify-content: center;
+           }     
+        }
     }
     
 }

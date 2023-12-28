@@ -3,7 +3,7 @@ import { NAVLINKS } from './constant'
 import styles from "./layout.module.scss"
 
 const Layout = ({children}) => {
-    const [activeItem,setActiveItem]=useState("");
+    const [activeItem,setActiveItem]=useState("home");
     const [scrollNumber,setScrollNum]=useState("default")
     const [shownavs,setShowNav]=useState(false)
     
