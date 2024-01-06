@@ -2,6 +2,7 @@ import React from 'react'
 import ContentHeading from '../../commoncomponents/heading'
 import styles from './project.module.scss'
 import { Button } from 'antd'
+import FadeInSection from '../fadeinsection'
 
 const ProjectSection = () => {
   return (
@@ -14,6 +15,7 @@ const ProjectSection = () => {
                 allignment={"center"}
            />
            <div className={styles.projectItems}>
+              <FadeInSection>
               <div className={styles.projectItem}>
                 <div className={styles.openLink}>
                 <Button>
@@ -43,6 +45,7 @@ const ProjectSection = () => {
                   </p>
                 </div>
               </div>
+              </FadeInSection>
             </div>
     </div>
   )

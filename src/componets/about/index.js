@@ -2,6 +2,7 @@ import React from 'react'
 import styles from './about.module.scss'
 import { Button } from 'antd'
 import ContentHeading from '../../commoncomponents/heading'
+import FadeInSection from '../fadeinsection'
 const AboutSection = () => {
   return (
     <div className={styles.aboutmeWrapper}>
@@ -45,9 +46,11 @@ const AboutSection = () => {
               <div className={styles.infoHead}>Phone:</div>
               <div className={styles.data}>7892433070</div>
               </div>
+              <FadeInSection>
               <div className={styles.cvBtn}>
                   <Button type='primary' shape='round'>Download CV</Button>
               </div>
+              </FadeInSection>
             </div> 
         </div>
         </div>

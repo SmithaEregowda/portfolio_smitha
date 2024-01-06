@@ -2,6 +2,7 @@ import {  Image } from 'antd';
 import React from 'react';
 import ContentHeading from '../../commoncomponents/heading';
 import styles from "./certificate.module.scss"
+import FadeInSection from '../fadeinsection';
 
 const CertificateSections = () => {
   return (
@@ -15,6 +16,7 @@ const CertificateSections = () => {
            />
            <div className={styles.certificateWrapper}>
            <div className={styles.certificateItems}>
+                <FadeInSection>
                 <div className={styles.certificateItem}>
                     <Image
                       width={250}
@@ -32,6 +34,8 @@ const CertificateSections = () => {
                         <p>Worked as an intern with Spark Foundation for 1 month and got certified</p>
                     </div>
                 </div>
+                </FadeInSection>
+                <FadeInSection>
                 <div className={styles.certificateItem}>
                     <Image
                         width={250}
@@ -49,6 +53,8 @@ const CertificateSections = () => {
                         <p>Completed a course "reponsive web design" under freeCodeCamp and got certified </p>
                     </div>
                 </div>
+                </FadeInSection>
+                <FadeInSection>
                 <div className={styles.certificateItem}>
                       <Image
                         width={250}
@@ -67,6 +73,8 @@ const CertificateSections = () => {
                         New Horizon College of Enginnering </p>
                    </div>
                 </div>
+                </FadeInSection>
+                <FadeInSection>
                 <div className={styles.certificateItem}>
                       <Image
                         width={250}
@@ -85,7 +93,9 @@ const CertificateSections = () => {
                      mentorship under mentor to go   </p>
                    </div>
                 </div>
-                <div className={styles.certificateItem}>
+                </FadeInSection>
+               <FadeInSection>
+               <div className={styles.certificateItem}>
                       <Image
                         width={250}
                         height={200}
@@ -102,6 +112,7 @@ const CertificateSections = () => {
                    <p>Got certfication for participating in NMIT hackthon 2021 conducted by NMIT  </p>
                    </div>
                 </div>
+               </FadeInSection>
            </div>
            </div>
     </div>

@@ -4,6 +4,7 @@ import { Carousel } from 'react-responsive-carousel'
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from './carosel.module.scss'
 import { downloadcv } from '../../commoncomponents/utils/downloadcv';
+import FadeInSection from '../fadeinsection';
 
 const CarouselComponent = () => {
   const navItemHandler=()=>{
@@ -29,15 +30,21 @@ const CarouselComponent = () => {
                         <div className={styles.smallText}>Hello !</div>
                         <div className={styles.intro}>I'm <span className={styles.name}>Smitha H E</span></div>
                         <div className={styles.job}>A Software Developer</div>
+                        
                         <div className={styles.btnActions}>
+                        <FadeInSection>
                           <Button 
                             type="primary"
                             onClick={downloadcv}
                           >Download CV</Button>
+                          </FadeInSection>
+                          <FadeInSection>
                           <Button type="primary" onClick={navItemHandler}>
                             Hire Me
                           </Button>
+                          </FadeInSection>
                         </div>
+                        
                     </div>
                     </div>
                     <div className={styles.imageSection}>
@@ -56,15 +63,20 @@ const CarouselComponent = () => {
                                 UI Developer</span> with a <br />
                                <div className={styles.subText}> Passion for Creating Beautiful Websites</div>
                         </div>
+                        
                         <div className={styles.btnActions}>
+                        <FadeInSection>
                           <Button 
                           type="primary"
                           onClick={downloadcv}
-                          >Download CV</Button>
+                          >Download CV</Button></FadeInSection>
+                          <FadeInSection>
                           <Button type="primary" onClick={navItemHandler}>
                             Hire Me
-                          </Button>
+                          </Button></FadeInSection>
                         </div>
+                        
+
                         </div>
                     </div>
                     <div className={styles.imageSection}>
