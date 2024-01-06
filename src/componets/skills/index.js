@@ -2,6 +2,7 @@ import { Progress } from 'antd'
 import React from 'react'
 import ContentHeading from '../../commoncomponents/heading'
 import styles from './skills.module.scss'
+import FadeInSection from '../fadeinsection'
 const Skills = () => {
   return (
     <div className={styles.skillsWrapper}>
@@ -17,35 +18,35 @@ const Skills = () => {
         <div className={styles.skillsContent}>
             <div className={styles.skillItem}>
                 <div className={styles.skillHeading}>React</div>
-                <div><Progress percent={85} /></div>
+                <FadeInSection><Progress percent={85} /></FadeInSection>
             </div>
             <div className={styles.skillItem}>
                 <div className={styles.skillHeading}>Node Js</div>
-                <div><Progress percent={60} /></div>
+                <FadeInSection><Progress percent={60} /></FadeInSection>
             </div>
             <div className={styles.skillItem}>
                 <div className={styles.skillHeading}>next js</div>
-                <div><Progress percent={60} /></div>
+                <FadeInSection><Progress percent={60} /></FadeInSection>
             </div>
             <div className={styles.skillItem}>
                 <div className={styles.skillHeading}>Css</div>
-                <div><Progress percent={85} /></div>
+                <FadeInSection><Progress percent={85} /></FadeInSection>
             </div>
             <div className={styles.skillItem}>
                 <div className={styles.skillHeading}>React Native</div>
-                <div><Progress percent={50} /></div>
+                <FadeInSection><Progress percent={50} /></FadeInSection>
             </div>
             <div className={styles.skillItem}>
                 <div className={styles.skillHeading}>Sass</div>
-                <div><Progress percent={85} /></div>
+                <FadeInSection><Progress percent={85} /></FadeInSection>
             </div>
             <div className={styles.skillItem}>
                 <div className={styles.skillHeading}>javascript</div>
-                <div><Progress percent={80} /></div>
+                <FadeInSection><Progress percent={80} /></FadeInSection>
             </div>
             <div className={styles.skillItem}>
                 <div className={styles.skillHeading}>mango db</div>
-                <div><Progress percent={40} /></div>
+                <FadeInSection><Progress percent={40} /></FadeInSection>
             </div>
            </div>
     </div>
