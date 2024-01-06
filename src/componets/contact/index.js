@@ -5,6 +5,7 @@ import ContentHeading from '../../commoncomponents/heading'
 import styles from "./contact.module.scss"
 import {LinkedinFilled,MailFilled,PhoneFilled} from "@ant-design/icons"
 import emailjs from "@emailjs/browser"
+import FadeInSection from '../fadeinsection'
 
 const ContactSection = () => {
     const [form]=Form.useForm();
@@ -44,6 +45,7 @@ const ContactSection = () => {
         </div>
         <div className={styles.contactIconsWrapper}>
         <div className={styles.contactIcons}>
+            <FadeInSection>
             <div className={styles.contactItem}>
                 <div className={styles.socialIcon}>
                 <div className={styles.icon}>
@@ -56,7 +58,9 @@ const ContactSection = () => {
                     <p>https://www.linkedin.com/in/smitha-h-e-a3b630156/</p>
                 </div>
             </div>
-            <div className={styles.contactItem}>
+            </FadeInSection>
+           <FadeInSection>
+           <div className={styles.contactItem}>
             <div className={styles.socialIcon}>
                 <div className={styles.icon}>
                 <MailFilled
@@ -68,7 +72,9 @@ const ContactSection = () => {
                     <p>smithaeregowda@gmail.com</p>
                 </div>
             </div>
-            <div className={styles.contactItem}>
+           </FadeInSection>
+           <FadeInSection>
+           <div className={styles.contactItem}>
             <div className={styles.socialIcon}>
                 <div className={styles.icon}>
                 <PhoneFilled 
@@ -80,6 +86,7 @@ const ContactSection = () => {
                    <p> 7892433070</p>
                 </div>
             </div>
+           </FadeInSection>
         </div>
         </div>
         <div className={styles.contactInfo}>
@@ -124,7 +131,9 @@ const ContactSection = () => {
                     </Form>
                 </div>
                 <div>
-                    <Button type='primary' onClick={()=>form.submit()}>Send Message</Button>
+                   <FadeInSection>
+                   <Button type='primary' onClick={()=>form.submit()}>Send Message</Button>
+                   </FadeInSection>
                 </div>
             </div>
             <div className={styles.contactImage}>

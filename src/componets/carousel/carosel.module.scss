@@ -23,11 +23,31 @@
                 font-size: 2rem;
                 letter-spacing: 3px; 
                 margin-bottom: 0.5rem;
+                display: flex;
+                grid-gap: 0.5rem;
                 .subText{
                     font-size: 1.3rem;
                     margin-top: 0.5rem;
                 }
                 .name{
+                    color: var(--prime1);
+                    animation: titleanimate 1s;
+                    overflow: hidden;
+                    display: flex;
+                    height: 33px;
+                }
+            }
+            .intro1{
+                font-weight: 800;
+                font-size: 2rem;
+                letter-spacing: 3px; 
+                margin-bottom: 0.5rem;
+                grid-gap: 0.5rem;
+                .subText{
+                    font-size: 1.3rem;
+                    margin-top: 0.5rem;
+                }
+                .name1{
                     color: var(--prime1);
                 }
             }
@@ -54,6 +74,42 @@
             img{
                 height: 80%;
             }
+        }
+    }
+    
+    @keyframes titleanimate {
+        0%{
+           width: 10px;
+        }
+        10%{
+            width: 30px;  
+        }
+        20%{
+            width: 50px;  
+        }
+        30%{
+            width: 70px;  
+        }
+        40%{
+            width:90px;
+        }
+        50%{
+            width:110px;
+        }
+        60%{
+            width:120px;
+        }
+        70%{
+            width:140px;
+        }
+        80%{
+            width:160px;
+        }
+        90%{
+            width: 180px;  
+        }
+        100%{
+            width: fit-content;  
         }
     }
     @media only screen and (max-width:775px){
