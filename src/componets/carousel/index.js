@@ -58,8 +58,8 @@ const CarouselComponent = () => {
                <div className={styles.carouselContent}>
                     <div className={styles.describeSection}>
                         <div>
-                        <div className={styles.intro}>
-                            <span className={styles.name}>
+                        <div className={styles.intro1}>
+                            <span className={styles.name1}>
                                 UI Developer</span> with a <br />
                                <div className={styles.subText}> Passion for Creating Beautiful Websites</div>
                         </div>
