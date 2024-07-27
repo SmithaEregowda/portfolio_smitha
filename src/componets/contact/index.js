@@ -55,7 +55,9 @@ const ContactSection = () => {
                 </div>
                 </div>
                 <div className={styles.label}>
-                    <p>https://www.linkedin.com/in/smitha-h-e-a3b630156/</p>
+                   <p> <a href='https://www.linkedin.com/in/smitha-h-e-a3b630156/' target="_blank">
+                    https://www.linkedin.com/in/smitha-h-e-a3b630156/
+                    </a></p>
                 </div>
             </div>
             </FadeInSection>

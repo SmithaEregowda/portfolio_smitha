@@ -1,5 +1,5 @@
 export const downloadcv=()=>{
-  const pdfUrl = "images/smithaHEResume.pdf";
+  const pdfUrl = "images/SMITHAHE_FULLSTACK.pdf";
   const link = document.createElement("a");
   link.href = pdfUrl;
   link.download = "document.pdf"; // specify the filename
