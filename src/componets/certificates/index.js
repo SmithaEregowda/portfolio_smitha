@@ -113,6 +113,25 @@ const CertificateSections = () => {
                    </div>
                 </div>
                </FadeInSection>
+               <FadeInSection>
+               <div className={styles.certificateItem}>
+                      <Image
+                        width={250}
+                        height={200}
+                        src={`images/certificate6.jpeg`}
+                        placeholder={
+                          <Image
+                            preview={false}
+                            src="images/certificate6.jpeg"
+                            width={200}
+                          />
+                        }
+                      />
+                     <div>
+                   <p>Got certification for participating in Chhalaang 2.0 conducted by MetaMorph</p>
+                   </div>
+                </div>
+               </FadeInSection>
            </div>
            </div>
     </div>

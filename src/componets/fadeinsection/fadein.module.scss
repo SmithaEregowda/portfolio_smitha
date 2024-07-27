@@ -12,3 +12,15 @@
     visibility: visible;
     display: flex; 
   }
+  .animateTitle{
+    animation: titleanimate 1s;
+  }
+
+  @keyframes titleanimate {
+    0%{
+        right: 0;
+    }
+    100%{
+        left: 0;
+    }
+  }

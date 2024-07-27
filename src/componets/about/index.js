@@ -7,13 +7,13 @@ const AboutSection = () => {
   return (
     <div className={styles.aboutmeWrapper}>
         <div className={styles.aboutLayout}>
-        <div className={styles.imageSection}>
+        {/* <div className={styles.imageSection}>
         <img
             src={"images/resumepic.png"} 
             width={200}
             height={200}
             alt='resumepic'/>
-        </div>
+        </div> */}
         <div className={styles.infosection}>
            <ContentHeading 
               bgText={"About"}

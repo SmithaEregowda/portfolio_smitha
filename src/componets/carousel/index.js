@@ -49,7 +49,7 @@ const CarouselComponent = () => {
                     </div>
                     <div className={styles.imageSection}>
                     <img
-                    src={"images/resumepic.png"} 
+                    src={"images/dp.png"} 
                     width={200}
                     height={200}
                     alt='resumepic'/>
@@ -60,7 +60,7 @@ const CarouselComponent = () => {
                         <div>
                         <div className={styles.intro1}>
                             <span className={styles.name1}>
-                                UI Developer</span> with a <br />
+                                FRONTEND/MERN Developer</span> with a <br />
                                <div className={styles.subText}> Passion for Creating Beautiful Websites</div>
                         </div>
                         

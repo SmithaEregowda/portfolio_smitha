@@ -3,14 +3,6 @@
     justify-content: center;
    
     .aboutLayout{
-        width: 95%;
-    display: grid;
-    grid-template-columns: 35% 1fr;
-    grid-gap: 5rem;
-        .imageSection{
-            display: grid;
-            justify-content: flex-end;
-        }
         .infosection{
             .personalData{
                 .row{
