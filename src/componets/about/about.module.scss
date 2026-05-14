@@ -1,83 +1,179 @@
-.aboutmeWrapper{
+.aboutmeWrapper {
     display: grid;
     justify-content: center;
-   
-    .aboutLayout{
-        .infosection{
-            .personalData{
-                .row{
+    padding: var(--space-12) var(--space-6);
+    width: 100%;
+
+    .aboutLayout {
+        display: grid;
+        //grid-template-columns: 1fr 1fr;
+        gap: var(--space-12);
+        align-items: start;
+        max-width: 1000px;
+        width: 100%;
+
+        .infosection {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-6);
+
+            .personalData {
+                display: grid;
+                gap: var(--space-2);
+
+                .row {
                     display: grid;
-                    grid-template-columns: 10rem 10rem;
-                    padding: 1rem;
-                    letter-spacing: 0.1rem;
-                    .data{
+                    grid-template-columns: 150px 1fr;
+                    gap: var(--space-4);
+                    padding: var(--space-4);
+                    border-radius: var(--radius-lg);
+                    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+                    border: 1px solid rgba(255, 80, 57, 0.1);
+                    transition: var(--transition-all);
+
+                    &:hover {
+                        border-color: var(--primary-lighter);
+                        transform: translateX(4px);
+                    }
+
+                    .infoHead {
+                        font-weight: var(--font-bold);
+                        color: var(--primary);
+                        text-transform: uppercase;
+                        letter-spacing: var(--letter-spacing-wide);
+                        font-size: var(--text-sm);
+                    }
+
+                    .data {
                         display: grid;
-                        text-align: center;
+                        text-align: left;
                         justify-content: flex-start;
-                        color: #999999;
+                        color: var(--text-secondary);
+                        line-height: var(--line-height-normal);
+                        word-break: break-word;
                     }
                 }
-                .cvBtn{
-                    padding: 2rem 3rem;
+
+                .cvBtn {
+                    padding: var(--space-4) var(--space-6);
+                    margin-top: var(--space-4);
+                }
+            }
+        }
+
+        .imageSection {
+            display: grid;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                border-radius: var(--radius-2xl);
+                box-shadow: var(--shadow-xl);
+                transition: var(--transition-all);
+
+                &:hover {
+                    transform: scale(1.05) rotate(2deg);
+                    box-shadow: 0 25px 50px rgba(255, 80, 57, 0.2);
                 }
             }
         }
     }
 
-    @media only screen and (max-width:775px){
-        .aboutLayout{
+    @media only screen and (max-width: 1024px) {
+        padding: var(--space-8) var(--space-4);
+
+        .aboutLayout {
+            grid-template-columns: 1fr;
+            gap: var(--space-8);
+
+            .personalData {
+                .row {
+                    grid-template-columns: 120px 1fr;
+                    padding: var(--space-3);
+
+                    .infoHead {
+                        font-size: var(--text-xs);
+                    }
+
+                    .data {
+                        font-size: var(--text-sm);
+                    }
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 775px) {
+        padding: var(--space-6) var(--space-4);
+
+        .aboutLayout {
             display: block;
             position: relative;
             width: 100%;
-            .imageSection{
-                position: absolute;
-                height: 100%;
+
+            .imageSection {
+                position: relative;
+                height: auto;
                 width: 100%;
+                margin-bottom: var(--space-6);
                 justify-content: center;
             }
-            .personalData{
+
+            .personalData {
                 display: grid;
                 justify-content: center;
-               .row{
-                letter-spacing: 0 !important;
-               }
-            }
-        }
-    }
-    @media only screen and (max-width:440px){
-        .aboutLayout{
-            display: block;
-            position: relative;
-            width: 100%;
-            .imageSection{
-                position: absolute;
-                height: 100%;
-                width: 100%;
-                justify-content: center;
-            }
-            .row{
-                grid-template-columns: 6rem 1fr !important;
-                padding: 0.5rem !important;
-                .infoHead{
-                    padding: 0.5rem 0;
-                }
-                .data{
-                    padding: 0.5rem 0;
+
+                .row {
+                    letter-spacing: 0;
+                    grid-template-columns: 100px 1fr;
+                    padding: var(--space-3);
+
+                    .infoHead {
+                        padding: 0;
+                        font-size: var(--text-xs);
+                    }
+
+                    .data {
+                        padding: 0;
+                        font-size: var(--text-xs);
+                    }
                 }
             }
-            .personalData{
-                display: grid;
-                justify-content: center;
-               .row{
-                letter-spacing: 0.03rem !important;
-               }
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        padding: var(--space-4) var(--space-3);
+
+        .aboutLayout {
+            .personalData {
+                .row {
+                    display: block;
+                    padding: var(--space-2);
+                    margin-bottom: var(--space-2);
+
+                    .infoHead {
+                        display: inline-block;
+                        margin-right: var(--space-2);
+                        margin-bottom: var(--space-1);
+                    }
+
+                    .data {
+                        display: inline;
+                    }
+                }
+
+                .cvBtn {
+                    padding: var(--space-3) var(--space-4);
+                    margin-top: var(--space-3);
+
+                    button {
+                        width: 100%;
+                    }
+                }
             }
         }
     }
-    @media only screen and (max-width:390px ){
-        .row{
-            display: block;
-        }
-    }
-   
 }

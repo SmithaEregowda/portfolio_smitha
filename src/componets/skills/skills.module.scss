@@ -1,23 +1,136 @@
-.skillsWrapper{
-    padding: 2rem;
+.skillsWrapper {
+    padding: var(--space-12) var(--space-6);
     display: grid;
-    // width: 80%;
-    .skillsContent{
-       display: grid;
-       grid-template-columns: auto auto;
-       grid-gap: 2rem;
-       .skillItem{
-        .skillHeading{
-            text-transform: uppercase;
-            font-size: 1.4rem;
-            font-weight: 600;
-            line-height: 2;
-        }
-       }
+    justify-content: center;
+    width: 100%;
+
+    .header {
+        width: 100%;
+        display: grid;
+        justify-content: center;
+        margin-bottom: var(--space-12);
     }
-    @media only screen and (max-width:775px){
-        .skillsContent{
-            grid-template-columns: none;
+
+    .skillsContent {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-gap: var(--space-8);
+        width: 100%;
+        max-width: 1000px;
+
+        .skillItem {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-3);
+            padding: var(--space-6);
+            background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+            border: 1px solid rgba(255, 80, 57, 0.1);
+            border-radius: var(--radius-xl);
+            transition: var(--transition-all);
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0;
+                height: 4px;
+                background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+                transition: width var(--transition-normal);
+                z-index: 1;
+            }
+
+            &:hover {
+                transform: translateY(-6px);
+                border-color: var(--primary);
+                box-shadow: 0 12px 30px rgba(255, 80, 57, 0.15);
+
+                &::before {
+                    width: 100%;
+                }
+
+                .skillHeading {
+                    color: var(--primary);
+                }
+
+                :global(.ant-progress-bg) {
+                    filter: brightness(1.1);
+                }
+            }
+
+            .skillHeading {
+                text-transform: uppercase;
+                font-size: var(--text-base);
+                font-weight: var(--font-bold);
+                line-height: var(--line-height-normal);
+                color: var(--text-primary);
+                letter-spacing: var(--letter-spacing-wide);
+                transition: var(--transition-colors);
+                margin: 0;
+            }
+
+            :global(.ant-progress) {
+                margin: var(--space-2) 0;
+            }
+
+            :global(.ant-progress-inner) {
+                background: var(--bg-primary);
+                border-radius: var(--radius-full);
+                height: 0.6rem;
+            }
+
+            :global(.ant-progress-bg) {
+                background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+                border-radius: var(--radius-full);
+                transition: var(--transition-normal);
+            }
+
+            :global(.ant-progress-text) {
+                color: var(--primary) !important;
+                font-weight: var(--font-bold);
+                font-size: var(--text-sm);
+                margin-left: var(--space-2);
+            }
+        }
+
+        @media only screen and (max-width: 1024px) {
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: var(--space-6);
+        }
+
+        @media only screen and (max-width: 775px) {
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-gap: var(--space-4);
+            width: 100%;
+
+            .skillItem {
+                padding: var(--space-4);
+
+                .skillHeading {
+                    font-size: var(--text-sm);
+                }
+            }
+        }
+
+        @media only screen and (max-width: 480px) {
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: var(--space-3);
+
+            .skillItem {
+                padding: var(--space-3);
+
+                .skillHeading {
+                    font-size: var(--text-xs);
+                    line-height: var(--line-height-snug);
+                }
+
+                :global(.ant-progress-inner) {
+                    height: 4px;
+                }
+            }
         }
     }
 }

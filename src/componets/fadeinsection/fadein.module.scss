@@ -1,26 +1,67 @@
 .fadeWrapper {
     opacity: 0;
-    transform: translate(0, 50%);
+    transform: translate(0, 50px);
     visibility: hidden;
-    transition: opacity 1000ms ease-out, transform 1000ms ease-out;
-    will-change: opacity, visibility;
-  }
-  
-  .isVisible {
-    opacity: 1;
-    transform: none;
-    visibility: visible;
-    display: flex; 
-  }
-  .animateTitle{
-    animation: titleanimate 1s;
-  }
+    transition: opacity 800ms cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 800ms cubic-bezier(0.4, 0, 0.2, 1),
+                visibility 800ms cubic-bezier(0.4, 0, 0.2, 1);
+    will-change: opacity, visibility, transform;
+}
 
-  @keyframes titleanimate {
-    0%{
+.isVisible {
+    opacity: 1;
+    transform: translate(0, 0);
+    visibility: visible;
+    display: flex;
+}
+
+.animateTitle {
+    animation: titleanimate 1s ease-out;
+}
+
+@keyframes titleanimate {
+    0% {
         right: 0;
+        opacity: 0;
     }
-    100%{
+    50% {
+        opacity: 0.5;
+    }
+    100% {
         left: 0;
+        opacity: 1;
     }
-  }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

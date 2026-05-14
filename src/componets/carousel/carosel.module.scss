@@ -1,138 +1,410 @@
-.carouselWrapper{
-    height: 50rem;
-    .carouselContent{
+.carouselWrapper {
+    height: 100vh;
+    max-height: 50rem;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    position: relative;
+    overflow: hidden;
+
+    .carouselContent {
         display: grid;
-        grid-template-columns: 60% 40%;
-        height: 50rem;
-        .describeSection{
-            position: relative;
-            display: grid;
+        grid-template-columns: 55% 45%;
+        height: 100%;
+        gap: var(--space-8);
+        align-items: center;
+        padding: var(--space-12);
+        position: relative;
+
+        .describeSection {
+            display: flex;
+            flex-direction: column;
             justify-content: center;
-            align-items: center;
-            // right: 15%;
-            .smallText{
-                font-weight: 600;
-                font-size: 1.2rem;
-                letter-spacing: 3px;
+            gap: var(--space-6);
+            z-index: 2;
+
+            > div {
+                display: flex;
+                flex-direction: column;
+                gap: var(--space-6);
+            }
+
+            .smallText {
+                font-weight: var(--font-bold);
+                font-size: var(--text-lg);
+                letter-spacing: var(--letter-spacing-wider);
                 text-transform: uppercase;
-                color:var(--prime1);
-                margin-bottom: 2rem;
+                background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                background-clip: text;
+                margin: 0;
+                animation: slideInLeft 0.8s ease-out;
             }
-            .intro{
-                font-weight: 800;
-                font-size: 2rem;
-                letter-spacing: 3px; 
-                margin-bottom: 0.5rem;
+
+            .intro {
+                font-weight: var(--font-extrabold);
+                font-size: var(--text-5xl);
+                letter-spacing: var(--letter-spacing-tight);
+                line-height: var(--line-height-tight);
+                margin: 0;
                 display: flex;
-                grid-gap: 0.5rem;
-                .subText{
-                    font-size: 1.3rem;
-                    margin-top: 0.5rem;
+                flex-direction: column;
+                gap: var(--space-3);
+                animation: fadeInUp 0.8s ease-out 0.2s both;
+
+                .name {
+                    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    font-weight: var(--font-extrabold);
+                    animation: titleanimate 1s ease-out 0.4s both;
+                    white-space: nowrap;
                 }
-                .name{
-                    color: var(--prime1);
-                    animation: titleanimate 1s;
-                    overflow: hidden;
-                    display: flex;
-                    height: 33px;
-                }
-            }
-            .intro1{
-                font-weight: 800;
-                font-size: 2rem;
-                letter-spacing: 3px; 
-                margin-bottom: 0.5rem;
-                grid-gap: 0.5rem;
-                .subText{
-                    font-size: 1.3rem;
-                    margin-top: 0.5rem;
-                }
-                .name1{
-                    color: var(--prime1);
+
+                .subText {
+                    font-size: var(--text-2xl);
+                    font-weight: var(--font-semibold);
+                    color: var(--text-secondary);
+                    line-height: var(--line-height-normal);
                 }
             }
-            .job{
-                font-weight: 800;
-                font-size: 2rem;
-                letter-spacing: 3px;  
-            }
-            .btnActions{
+
+            .intro1 {
+                font-weight: var(--font-extrabold);
+                font-size: var(--text-4xl);
+                letter-spacing: var(--letter-spacing-tight);
+                line-height: var(--line-height-tight);
+                margin: 0;
                 display: flex;
-                justify-content: center;
-                grid-gap: 1rem;
-                padding: 1rem;
+                flex-direction: column;
+                gap: var(--space-3);
+                animation: fadeInUp 0.8s ease-out 0.2s both;
+
+                .name1 {
+                    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    font-weight: var(--font-extrabold);
+                }
+
+                .subText {
+                    font-size: var(--text-2xl);
+                    font-weight: var(--font-semibold);
+                    color: var(--text-secondary);
+                    line-height: var(--line-height-normal);
+                }
+            }
+
+            .job {
+                font-weight: var(--font-bold);
+                font-size: var(--text-2xl);
+                letter-spacing: var(--letter-spacing-wide);
+                color: var(--text-secondary);
+                margin: 0;
+                animation: fadeInUp 0.8s ease-out 0.4s both;
+            }
+
+            .btnActions {
+                display: flex;
+                gap: var(--space-4);
+                margin-top: var(--space-4);
+                animation: fadeInUp 0.8s ease-out 0.6s both;
+
+                button {
+                    font-size: var(--text-base);
+                    font-weight: var(--font-semibold);
+                    padding: var(--space-4) var(--space-8);
+                    border-radius: var(--radius-lg);
+                    text-transform: uppercase;
+                    letter-spacing: var(--letter-spacing-wide);
+                    transition: var(--transition-all);
+                    cursor: pointer;
+                    min-width: 150px;
+
+                    &:hover:not(:disabled) {
+                        transform: translateY(-3px);
+                        box-shadow: 0 10px 30px rgba(255, 80, 57, 0.3);
+                    }
+
+                    &:active {
+                        transform: translateY(-1px);
+                    }
+                }
             }
         }
-        .imageSection{
-            height: 80%;
-            display: grid;
+
+        .imageSection {
+            display: flex;
             align-items: center;
-            justify-content: flex-start;
-            padding: 1rem;
+            justify-content: center;
             position: relative;
-            right: 15%;
-            img{
-                height: 80%;
+            height: 100%;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                max-height: 450px;
+                object-fit: contain;
+                filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.3));
+                animation: slideInRight 0.8s ease-out;
+
+                &:hover {
+                    filter: drop-shadow(0 15px 40px rgba(255, 80, 57, 0.3));
+                    transform: translateY(-10px);
+                    transition: var(--transition-normal);
+                }
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                width: 400px;
+                height: 400px;
+                background: radial-gradient(circle, rgba(255, 80, 57, 0.1) 0%, transparent 70%);
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+                animation: pulse 3s ease-in-out infinite;
             }
         }
     }
-    
+
     @keyframes titleanimate {
-        0%{
-           width: 10px;
+        0% {
+            opacity: 0;
+            width: 0;
         }
-        10%{
-            width: 30px;  
-        }
-        20%{
-            width: 50px;  
-        }
-        30%{
-            width: 70px;  
-        }
-        40%{
-            width:90px;
-        }
-        50%{
-            width:110px;
-        }
-        60%{
-            width:120px;
-        }
-        70%{
-            width:140px;
-        }
-        80%{
-            width:160px;
-        }
-        90%{
-            width: 180px;  
-        }
-        100%{
-            width: fit-content;  
+        100% {
+            opacity: 1;
+            width: 100%;
         }
     }
-    @media only screen and (max-width:775px){
-        .carouselContent{
-            position: relative;
-            display: block;
-            height: 30rem;
-            .describeSection{
-                width: 100%;
-                top: 32%;
-                z-index: 3;
+
+    @keyframes slideInLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(50px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    @keyframes pulse {
+        0%, 100% {
+            transform: translate(-50%, -50%) scale(1);
+            opacity: 0.5;
+        }
+        50% {
+            transform: translate(-50%, -50%) scale(1.05);
+            opacity: 0.3;
+        }
+    }
+
+    /* Carousel Controls Override */
+    :global {
+        .carousel {
+            .carousel-slider {
+                position: relative;
+                height: 100%;
             }
-            .imageSection{
+
+            .thumbs-wrapper {
+                display: none;
+            }
+
+            .carousel-status {
+                display: none;
+            }
+
+            .dot {
+                background-color: rgba(255, 80, 57, 0.3) !important;
+                border: none;
+                transition: var(--transition-normal);
+
+                &.selected {
+                    background-color: var(--primary) !important;
+                    box-shadow: 0 0 10px rgba(255, 80, 57, 0.5);
+                }
+
+                &:hover {
+                    background-color: var(--primary) !important;
+                }
+            }
+
+            .carousel-slider::after {
+                display: none;
+            }
+        }
+    }
+
+    @media only screen and (max-width: 1200px) {
+        .carouselContent {
+            grid-template-columns: 1fr;
+            gap: var(--space-6);
+            padding: var(--space-8);
+
+            .describeSection {
+                z-index: 3;
+                position: relative;
+
+                .intro {
+                    font-size: var(--text-4xl);
+                }
+
+                .intro1 {
+                    font-size: var(--text-3xl);
+                }
+
+                .job {
+                    font-size: var(--text-xl);
+                }
+
+                .btnActions {
+                    flex-wrap: wrap;
+                }
+            }
+
+            .imageSection {
                 position: absolute;
                 right: 0;
-                bottom: 10%;
+                bottom: 0;
+                width: 50%;
+                height: 60%;
+                opacity: 0.8;
+                z-index: 1;
+
+                img {
+                    max-height: 300px;
+                }
             }
         }
     }
-}
-@media only screen and (max-width:775px){
-    .carouselWrapper{
-        height: 35rem;
+
+    @media only screen and (max-width: 775px) {
+        height: auto;
+        min-height: 35rem;
+        max-height: none;
+
+        .carouselContent {
+            grid-template-columns: 1fr;
+            gap: var(--space-4);
+            padding: var(--space-8) var(--space-4);
+            position: relative;
+
+            .describeSection {
+                z-index: 3;
+                position: relative;
+
+                .smallText {
+                    font-size: var(--text-base);
+                }
+
+                .intro {
+                    font-size: var(--text-3xl);
+                }
+
+                .intro1 {
+                    font-size: var(--text-2xl);
+                }
+
+                .job {
+                    font-size: var(--text-lg);
+                }
+
+                .btnActions {
+                    flex-direction: column;
+                    gap: var(--space-3);
+
+                    button {
+                        width: 100%;
+                        min-width: unset;
+                    }
+                }
+            }
+
+            .imageSection {
+                position: relative;
+                width: 100%;
+                height: 250px;
+                margin-top: var(--space-6);
+
+                img {
+                    max-height: 250px;
+                    max-width: 200px;
+                }
+            }
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        min-height: 30rem;
+
+        .carouselContent {
+            padding: var(--space-6) var(--space-3);
+
+            .describeSection {
+                .smallText {
+                    font-size: var(--text-sm);
+                    letter-spacing: var(--letter-spacing-normal);
+                }
+
+                .intro {
+                    font-size: var(--text-2xl);
+                }
+
+                .intro1 {
+                    font-size: var(--text-xl);
+                }
+
+                .job {
+                    font-size: var(--text-base);
+                }
+
+                .btnActions {
+                    gap: var(--space-2);
+
+                    button {
+                        padding: var(--space-3) var(--space-4);
+                        font-size: var(--text-sm);
+                    }
+                }
+            }
+
+            .imageSection {
+                height: 200px;
+
+                img {
+                    max-height: 200px;
+                }
+            }
+        }
     }
 }
 
