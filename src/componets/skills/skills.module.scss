@@ -13,7 +13,7 @@
 
     .skillsContent {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(3, 1fr);
         grid-gap: var(--space-8);
         width: 100%;
         max-width: 1000px;
@@ -30,6 +30,9 @@
             position: relative;
             overflow: hidden;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            height: 180px;
+            width: 100%;
+            justify-content: space-between;
 
             &::before {
                 content: '';

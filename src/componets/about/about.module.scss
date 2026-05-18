@@ -20,6 +20,7 @@
             .personalData {
                 display: grid;
                 gap: var(--space-2);
+                grid-template-columns: 1fr;
 
                 .row {
                     display: grid;
@@ -30,6 +31,9 @@
                     background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
                     border: 1px solid rgba(255, 80, 57, 0.1);
                     transition: var(--transition-all);
+                    height: 80px;
+                    width: 100%;
+                    align-items: center;
 
                     &:hover {
                         border-color: var(--primary-lighter);
