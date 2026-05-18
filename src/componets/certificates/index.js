@@ -1,139 +1,87 @@
-import {  Image } from 'antd';
+import { Image } from 'antd';
 import React from 'react';
 import ContentHeading from '../../commoncomponents/heading';
 import styles from "./certificate.module.scss"
 import FadeInSection from '../fadeinsection';
 
 const CertificateSections = () => {
+  const certificates = [
+    {
+      id: 1,
+      image: 'images/certificate1.jpg',
+      alt: 'Spark Foundation Internship Certificate',
+      description: 'Spark Foundation Internship - Successfully completed a 1-month internship and received certification'
+    },
+    {
+      id: 2,
+      image: 'images/certificate2.jpg',
+      alt: 'freeCodeCamp Responsive Web Design Certificate',
+      description: 'freeCodeCamp Responsive Web Design - Completed comprehensive course on responsive web design principles'
+    },
+    {
+      id: 3,
+      image: 'images/certificate3.jpg',
+      alt: 'UI Hackathon Achievement Certificate',
+      description: 'UI Hackathon - Secured 3rd position in UI hackathon organized by New Horizon College of Engineering'
+    },
+    {
+      id: 4,
+      image: 'images/certificate4.jpeg',
+      alt: 'Mentorship Program Certificate',
+      description: 'Mentorship Program - Successfully completed 3 months of structured mentorship under industry mentor'
+    },
+    {
+      id: 5,
+      image: 'images/certificate5.jpeg',
+      alt: 'NMIT Hackathon Certificate',
+      description: 'NMIT Hackathon 2021 - Participated in and received certification from NMIT Hackathon 2021'
+    },
+    {
+      id: 6,
+      image: 'images/certificate6.jpeg',
+      alt: 'Chhalaang 2.0 Participation Certificate',
+      description: 'Chhalaang 2.0 - Participated in Chhalaang 2.0 competition conducted by MetaMorph'
+    }
+  ];
+
   return (
     <div className={styles.wrapper}>
-        <ContentHeading 
-                bgText={"My Achievements"}
-                title={"Certificates & Rewards"}
-                info={<p>Hi! , I'm Smitha H E , UI Developer with passion towards 
-                creating Web Application <br /> Here some of the details About me:</p>}
-                allignment={"center"}
-           />
-           <div className={styles.certificateWrapper}>
-           <div className={styles.certificateItems}>
-                <FadeInSection>
-                <div className={styles.certificateItem}>
+      <ContentHeading 
+        bgText={"My Achievements"}
+        title={"Certificates & Rewards"}
+        info={<p>I have earned multiple certifications and participated in various competitions, demonstrating my commitment to continuous learning and professional development in web development.</p>}
+        allignment={"center"}
+      />
+      <div className={styles.certificateWrapper}>
+        <div className={styles.certificateItems}>
+          {certificates.map((cert) => (
+            <FadeInSection key={cert.id}>
+              <div className={styles.certificateItem} role="article">
+                <Image
+                  width={250}
+                  height={180}
+                  src={cert.image}
+                  alt={cert.alt}
+                  preview={{
+                    mask: 'View Certificate'
+                  }}
+                  placeholder={
                     <Image
-                      width={250}
-                      height={200}
-                      src={`images/certificate1.jpg`}
-                      placeholder={
-                        <Image
-                          preview={false}
-                          src="images/certificate1.jpg"
-                          width={200}
-                        />
-                      }
+                      preview={false}
+                      src={cert.image}
+                      width={200}
+                      alt={cert.alt}
                     />
-                    <div>
-                        <p>Worked as an intern with Spark Foundation for 1 month and got certified</p>
-                    </div>
+                  }
+                />
+                <div>
+                  <p>{cert.description}</p>
                 </div>
-                </FadeInSection>
-                <FadeInSection>
-                <div className={styles.certificateItem}>
-                    <Image
-                        width={250}
-                        height={200}
-                        src={`images/certificate2.jpg`}
-                        placeholder={
-                          <Image
-                            preview={false}
-                            src="images/certificate2.jpg"
-                            width={200}
-                          />
-                        }
-                      />
-                    <div>
-                        <p>Completed a course "reponsive web design" under freeCodeCamp and got certified </p>
-                    </div>
-                </div>
-                </FadeInSection>
-                <FadeInSection>
-                <div className={styles.certificateItem}>
-                      <Image
-                        width={250}
-                        height={200}
-                        src={`images/certificate3.jpg`}
-                        placeholder={
-                          <Image
-                            preview={false}
-                            src="images/certificate3.jpg"
-                            width={200}
-                          />
-                        }
-                      />
-                   <div>
-                   <p>Got certfication for securing 3rd position in UI hackthon organised by 
-                        New Horizon College of Enginnering </p>
-                   </div>
-                </div>
-                </FadeInSection>
-                <FadeInSection>
-                <div className={styles.certificateItem}>
-                      <Image
-                        width={250}
-                        height={200}
-                        src={`images/certificate4.jpeg`}
-                        placeholder={
-                          <Image
-                            preview={false}
-                            src="images/certificate4.jpeg"
-                            width={200}
-                          />
-                        }
-                      />
-                    <div>
-                   <p>Got certfication for successfully completing 3 months of
-                     mentorship under mentor to go   </p>
-                   </div>
-                </div>
-                </FadeInSection>
-               <FadeInSection>
-               <div className={styles.certificateItem}>
-                      <Image
-                        width={250}
-                        height={200}
-                        src={`images/certificate5.jpeg`}
-                        placeholder={
-                          <Image
-                            preview={false}
-                            src="images/certificate5.jpeg"
-                            width={200}
-                          />
-                        }
-                      />
-                     <div>
-                   <p>Got certfication for participating in NMIT hackthon 2021 conducted by NMIT  </p>
-                   </div>
-                </div>
-               </FadeInSection>
-               <FadeInSection>
-               <div className={styles.certificateItem}>
-                      <Image
-                        width={250}
-                        height={200}
-                        src={`images/certificate6.jpeg`}
-                        placeholder={
-                          <Image
-                            preview={false}
-                            src="images/certificate6.jpeg"
-                            width={200}
-                          />
-                        }
-                      />
-                     <div>
-                   <p>Got certification for participating in Chhalaang 2.0 conducted by MetaMorph</p>
-                   </div>
-                </div>
-               </FadeInSection>
-           </div>
-           </div>
+              </div>
+            </FadeInSection>
+          ))}
+        </div>
+      </div>
     </div>
   )
 }

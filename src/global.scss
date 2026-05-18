@@ -1,32 +1,361 @@
-.appHomeContent{
-    background: var(--black);
-    color:var(--white) ;
-}
-.ant-btn{
-    background: var(--prime1);
-}
-.ant-progress-inner{
-    background:var(--white) !important;
-    opacity: 0.5 !important;
-    height: 0.8rem !important;
-}
-.ant-progress-bg{
-    background: var(--prime1) !important;
-    height: 0.8rem !important;
-}
-.ant-progress-text{
-    color: var(--white) !important;
+/* ========================
+   GLOBAL STYLES
+   ======================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-label{
-    color: var(--white) !important;
-    font-size: 1.4rem !important;
-    font-weight: 600;
-    line-height: 2;
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
 }
-.ant-input{
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: var(--line-height-normal);
+    transition: var(--transition-all);
+}
+
+/* ========================
+   ROOT CONTAINER
+   ======================== */
+.appHomeContent {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    color: var(--text-primary);
+    min-height: 100vh;
+    transition: var(--transition-all);
+}
+
+/* ========================
+   ANT DESIGN COMPONENT OVERRIDES
+   ======================== */
+
+/* Buttons */
+.ant-btn {
+    background: var(--primary);
     border: none;
-    background: rgb(70, 69, 69);
-    color: white !important;
-    padding: 0.5rem;
+    border-radius: var(--radius-lg);
+    font-weight: var(--font-semibold);
+    font-size: var(--text-base);
+    padding: var(--space-3) var(--space-6);
+    transition: var(--transition-all);
+    box-shadow: 0 2px 8px rgba(255, 80, 57, 0.2);
+    height: auto;
+    line-height: 1.5;
+
+    &:hover {
+        background: var(--primary-dark);
+        box-shadow: 0 8px 16px rgba(255, 80, 57, 0.3);
+        transform: translateY(-2px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
+
+    &.ant-btn-primary {
+        background: var(--primary);
+        color: white;
+
+        &:hover {
+            background: var(--primary-dark);
+        }
+    }
+
+    &.ant-btn-secondary {
+        background: var(--secondary);
+        color: white;
+
+        &:hover {
+            background: var(--secondary-dark);
+        }
+    }
+
+    &.ant-btn-text {
+        color: var(--primary);
+
+        &:hover {
+            color: var(--primary-dark);
+        }
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+/* Progress Bars */
+.ant-progress-inner {
+    background: var(--gray-200);
+    opacity: 1;
+    height: 0.8rem;
+    border-radius: var(--radius-full);
+    overflow: hidden;
+}
+
+.ant-progress-bg {
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+    height: 0.8rem;
+    border-radius: var(--radius-full);
+    transition: width 0.5s ease-out;
+}
+
+.ant-progress-text {
+    color: var(--text-secondary) !important;
+    font-weight: var(--font-semibold);
+    font-size: var(--text-sm);
+}
+
+/* Form Labels */
+label {
+    color: var(--text-primary) !important;
+    font-size: var(--text-base) !important;
+    font-weight: var(--font-semibold);
+    line-height: var(--line-height-normal);
+    margin-bottom: var(--space-2);
+    display: block;
+    transition: var(--transition-colors);
+
+    &:hover {
+        color: var(--primary) !important;
+    }
+}
+
+/* Form Inputs */
+.ant-input,
+.ant-input-number,
+textarea.ant-input {
+    border: 2px solid var(--gray-200);
+    background: var(--bg-secondary);
+    color: var(--text-primary) !important;
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-lg);
+    font-size: var(--text-base);
+    transition: var(--transition-all);
+
+    &:hover {
+        border-color: var(--primary-lighter);
+    }
+
+    &:focus,
+    &.ant-input-focused {
+        border-color: var(--primary);
+        box-shadow: 0 0 0 3px rgba(255, 80, 57, 0.1);
+    }
+
+    &::placeholder {
+        color: var(--text-tertiary);
+    }
+}
+
+/* ========================
+   SPACING UTILITIES
+   ======================== */
+
+.mt-0 { margin-top: var(--space-0); }
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-6 { margin-top: var(--space-6); }
+.mt-8 { margin-top: var(--space-8); }
+
+.mb-0 { margin-bottom: var(--space-0); }
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-6 { margin-bottom: var(--space-6); }
+.mb-8 { margin-bottom: var(--space-8); }
+
+.px-4 { padding-left: var(--space-4); padding-right: var(--space-4); }
+.py-4 { padding-top: var(--space-4); padding-bottom: var(--space-4); }
+.p-6 { padding: var(--space-6); }
+
+/* ========================
+   TYPOGRAPHY UTILITIES
+   ======================== */
+
+.text-xs { font-size: var(--text-xs); }
+.text-sm { font-size: var(--text-sm); }
+.text-base { font-size: var(--text-base); }
+.text-lg { font-size: var(--text-lg); }
+.text-xl { font-size: var(--text-xl); }
+.text-2xl { font-size: var(--text-2xl); }
+.text-3xl { font-size: var(--text-3xl); }
+
+.font-light { font-weight: var(--font-light); }
+.font-normal { font-weight: var(--font-normal); }
+.font-medium { font-weight: var(--font-medium); }
+.font-semibold { font-weight: var(--font-semibold); }
+.font-bold { font-weight: var(--font-bold); }
+
+.text-primary { color: var(--text-primary); }
+.text-secondary { color: var(--text-secondary); }
+.text-tertiary { color: var(--text-tertiary); }
+
+/* ========================
+   ANIMATIONS & KEYFRAMES
+   ======================== */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -1000px 0;
+    }
+    100% {
+        background-position: 1000px 0;
+    }
+}
+
+/* Animation classes */
+.animate-fade-in-up {
+    animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+    animation: slideInRight 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+    animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-scale-in {
+    animation: scaleIn 0.4s ease-out forwards;
+}
+
+.animate-pulse {
+    animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Staggered animation delays */
+.delay-1 { animation-delay: 100ms; }
+.delay-2 { animation-delay: 200ms; }
+.delay-3 { animation-delay: 300ms; }
+.delay-4 { animation-delay: 400ms; }
+
+/* ========================
+   UTILITY CLASSES
+   ======================== */
+
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-center {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.transition-all {
+    transition: var(--transition-all);
+}
+
+.transition-colors {
+    transition: color, background-color, border-color var(--transition-normal);
+}
+
+.transform {
+    transform: translateZ(0);
+}
+
+/* ========================
+   SCROLLBAR STYLING
+   ======================== */
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: var(--radius-full);
+
+    &:hover {
+        background: var(--primary-dark);
+    }
 }
