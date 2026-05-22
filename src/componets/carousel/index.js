@@ -1,25 +1,25 @@
-import { Button } from 'antd';
-import { ArrowRightOutlined, DownloadOutlined } from '@ant-design/icons';
-import React from 'react'
-import { Carousel } from 'react-responsive-carousel'
+import { Button } from "antd";
+import { ArrowRightOutlined, DownloadOutlined } from "@ant-design/icons";
+import React from "react";
+import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import styles from './carosel.module.scss'
-import { downloadcv } from '../../commoncomponents/utils/downloadcv';
-import FadeInSection from '../fadeinsection';
+import styles from "./carosel.module.scss";
+import { downloadcv } from "../../commoncomponents/utils/downloadcv";
+import FadeInSection from "../fadeinsection";
 
 const CarouselComponent = () => {
   const navItemHandler = () => {
     let offsetTop = document.getElementById("contact").offsetTop;
     window.scrollTo({
-        top: offsetTop - 100, 
-        behavior: "smooth"
+      top: offsetTop - 100,
+      behavior: "smooth",
     });
-  }
+  };
 
   return (
-    <Carousel  
-      autoPlay={true} 
-      showThumbs={false} 
+    <Carousel
+      autoPlay={true}
+      showThumbs={false}
       infiniteLoop={true}
       className={styles.carouselWrapper}
       showArrows={false}
@@ -37,10 +37,10 @@ const CarouselComponent = () => {
               I'm <span className={styles.name}>Smitha H E</span>
             </div>
             <div className={styles.job}>A Full-Stack Web Developer</div>
-            
+
             <div className={styles.btnActions}>
               <FadeInSection>
-                <Button 
+                <Button
                   type="primary"
                   size="large"
                   onClick={downloadcv}
@@ -51,7 +51,7 @@ const CarouselComponent = () => {
                 </Button>
               </FadeInSection>
               <FadeInSection>
-                <Button 
+                <Button
                   type="primary"
                   size="large"
                   onClick={navItemHandler}
@@ -66,10 +66,10 @@ const CarouselComponent = () => {
         </div>
         <div className={styles.imageSection}>
           <img
-            src="images/dp.png" 
+            src="images/dp.png"
             width={200}
             height={200}
-            alt='Profile Picture - Smitha H E'
+            alt="Profile Picture - Smitha H E"
             loading="lazy"
           />
         </div>
@@ -80,17 +80,15 @@ const CarouselComponent = () => {
         <div className={styles.describeSection}>
           <div>
             <div className={styles.intro1}>
-              <span className={styles.name1}>
-                FRONTEND/MERN Developer
-              </span>
+              <span className={styles.name1}>FRONTEND/MERN Developer</span>
               <div className={styles.subText}>
                 with a Passion for Creating Beautiful & Functional Websites
               </div>
             </div>
-            
+
             <div className={styles.btnActions}>
               <FadeInSection>
-                <Button 
+                <Button
                   type="primary"
                   size="large"
                   onClick={downloadcv}
@@ -101,7 +99,7 @@ const CarouselComponent = () => {
                 </Button>
               </FadeInSection>
               <FadeInSection>
-                <Button 
+                <Button
                   type="primary"
                   size="large"
                   onClick={navItemHandler}
@@ -116,15 +114,15 @@ const CarouselComponent = () => {
         </div>
         <div className={styles.imageSection}>
           <img
-            src="images/working.jpeg" 
+            src="images/working.jpeg"
             width={200}
-            alt='Developer working on code'
+            alt="Developer coding"
             loading="lazy"
           />
         </div>
       </div>
     </Carousel>
-  )
-}
+  );
+};
 
-export default CarouselComponent
+export default CarouselComponent;
