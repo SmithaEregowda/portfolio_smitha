@@ -69,7 +69,7 @@ const CarouselComponent = () => {
             src="images/dp.png"
             width={200}
             height={200}
-            alt="Profile Picture - Smitha H E"
+            alt="Profilepic"
             loading="lazy"
           />
         </div>
